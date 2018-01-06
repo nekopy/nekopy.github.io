@@ -167,7 +167,7 @@
             </h1>
             <section itemprop="articleBody" class="article-content">
                 <p>A couple nights ago I decided to finally get some encryption up and running with eCryptfs.</p>
-<p><img alt="eCryptfs Honey Badger Mascot" src="http://ecryptfs.org/img/big-honey-badger.png" /></p>
+<p><img alt="eCryptfs Honey Badger Mascot" src="http://ecryptfs.org/img/big-honey-badger.png"></p>
 <p>I have a buddy who's using GPG to do their encryption, however this wasnt really the right choice for me. The primary issue was that the GPG tools I was looking at tend to just deal with a single file. The recommended way of using GPG on folders is to tar them up and encrypt them. To me this approach is really annoying. I dont want to untar some files whenever I want to use them. So after some further digging I wound up coming across the recommendation of using eCryptfs. </p>
 <p>eCryptfs is, as the name suggests, actually an encrypted filesystem and abstraction layer. The way it works is by introducing a kernel module which handles mounting the encrypted files on disk, and decrypts/encrypts file I/O on the fly. This way, you never actually have files decrypted on disk. Judging from the files, you can even set it up to work on your swap space. </p>
 <p>The issue I have with it right now is that it's <em>slow</em>. I'm trying to move some very large files, and it's grinding my laptop to a halt. As you might have seen in my other post, my laptop is relatively chunky. However, since this is overhead, I'm gonna give it the benefit of the doubt and finish moving the files to where I want them before I throw in the towel and try something else. But really, it hurt. I would have written this blog post on the 7th but the kernel module brought even vim to a halt. And since its in the kernel, I can't just hop in and set a good nice value...</p>
@@ -338,6 +338,9 @@
                     <ul class="eevee-footer mdl-mega-footer--link-list">
                             <li>Powered by love &amp; rainbow sparkles.</li>
                             <li><a href="https://kura.io/eevee/" title="Eevee">Eevee</a> theme by <a href="https://kura.io/" title="kura.io">kura.io</a></li>
+			<li>
+			<iframe src="https://keroserene.net/snowflake/embed.html" width="88" height="16" frameborder="0" scrolling="no"></iframe>
+			</li>
                     </ul>
             </div>
         </footer>
